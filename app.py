@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 
-#curl -i -X POST http://127.0.0.1:7007/api/v1/square_with_parameters_with_body_json -H 'Content-Type: application/json' -d '{"tinggi":165, "berat": 80}'
+#curl -i -X POST http://127.0.0.1:5000/api/v1/square_with_parameters_with_body_json -H 'Content-Type: application/json' -d '{"tinggi":165, "berat": 80}'
 @app.route("/api/v1/quiz_bmi_calculator", methods=["POST"])
 def bmi_calculator():
     t = request.json['tinggi']
